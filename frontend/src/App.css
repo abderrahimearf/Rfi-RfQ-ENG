@@ -1,0 +1,599 @@
+/* ======================================================
+   Layout Container
+   ====================================================== */
+
+.app {
+  display: flex;
+  height: 100vh;
+   background: linear-gradient(to right, #7396dd , #b3b7b5);
+  
+}
+
+/* ======================================================
+   Sidebar
+   ====================================================== */
+
+.sidebar {
+  width: 200px;
+
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  justify-content: flex-start;
+  height: 100vh; /* toute la hauteur de l'écran */
+  align-items: flex-start; /* start est mieux que start seul */
+}
+
+
+.brand {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  width: 100%;
+  width: 100%;
+ 
+  border-radius: 3%;
+  
+
+}
+
+.brand-logo {
+  width: 100%;
+  height: auto; /* La hauteur visible */
+  object-fit: cover;  /* Remplit sans conserver toute l’image */
+  object-position: top center; /* Garde la partie du haut visible */
+  display: block;
+  border: #0c0c0c;
+
+}
+
+.brand-name {
+  font-size: 1em;
+  font-weight: bold;
+  color: #fff;
+}
+
+.nav {
+  flex: 1;
+}
+
+.nav-item {
+  display: block;
+  width: 100%;
+ 
+  border: none;
+  text-align: center; /* <-- change ici */
+  padding: 10px 8px;
+  margin-bottom: 20px;
+
+  box-shadow: 2px 2px 6px 1px rgba(0,0,0,0.4);
+
+  font-family: cursive; /* police */
+     /* gras */
+  font-size: 1.2em; 
+  font-size: 1em;
+ 
+  color: #0c0c0c;
+  cursor: pointer;
+  border-radius: 9px;
+  transition: background-color .2s;
+  border: 0.5px solid #151515;
+}
+
+
+.nav-item:hover {
+  background-color: rgba(253, 251, 251, 0.2);
+}
+
+.nav-item.active {
+  background-color: rgba(255, 255, 255, 0.3);
+  font-weight: bold;
+}
+
+.sidebar-footer {
+  margin-top: auto;
+}
+
+/* ======================================================
+   Main & Header
+   ====================================================== */
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  
+ 
+  font-family: cursive; 
+}
+
+.header-titles h2 {
+  margin: 0;
+  font-size: 1.9em;
+}
+
+.subtitle {
+  margin: 4px 0 0;
+  font-size: 0.9em;
+  color: #a2f3af;
+    background-color: transparent;
+   text-shadow: 3px 4px 2px #050505;
+     font-family: cursive; 
+}
+
+.new-button {
+  display: inline-flex; /* même comportement que les autres */
+  align-items: center;  /* centre verticalement */
+  background-color: transparent;
+
+  border: none;
+  color: #131313;
+  padding: 8px 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color .2s;
+  font-family: cursive;
+  margin-left: 10px;
+}
+
+
+.new-button:hover {
+  background-color: #d8dddf;
+}
+
+/* ======================================================
+   Workspace: Side Panel & Content Panel
+   ====================================================== */
+
+.workspace {
+  display: flex;
+  flex: 1;
+ 
+}
+
+.side-panel {
+  width: 200px;
+  
+  padding: 16px;
+  
+  display: flex;
+  flex-direction: column;
+}
+
+
+.content-panel {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  background: transparent;
+  
+}
+
+/* ------------------------------------------------------
+   Template Selector
+   ------------------------------------------------------ */
+
+
+
+
+
+
+/* ------------------------------------------------------
+   Add Button
+   ------------------------------------------------------ */
+
+.add-button {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  
+  color: #333;
+  padding: 6px 8px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 0.9em;
+  transition: background-color .2s;
+}
+
+.add-button:hover {
+  background-color: #ADD8E6;
+}
+
+.plus-icon {
+  margin-right: 6px;
+  font-weight: bold;
+}
+
+/* ------------------------------------------------------
+   Section List
+   ------------------------------------------------------ */
+
+.section-list {
+  flex: 1;
+  overflow-y: auto;
+
+}
+
+.section-item {
+  display: flex;
+  align-items: center;
+  padding: 6px 10px;
+  border: 1px solid #151515;
+  border-radius: 4px;
+  margin-bottom: 8px;
+ 
+  cursor: pointer;
+  user-select: none;
+  transition: background-color .2s;
+}
+
+.section-item:hover {
+  background-color: #f5f5f5;
+}
+
+.section-item input {
+  margin-right: 8px;
+}
+
+/* ------------------------------------------------------
+   Document Preview
+   ------------------------------------------------------ */
+
+
+
+/* ------------------------------------------------------
+   Instruction Input
+   ------------------------------------------------------ */
+
+.instruction-input {
+  display: flex;
+  align-items: flex-end;
+  border: 20px solid rgb(61, 171, 230);
+  border-radius: 15px;
+  margin-bottom: 10px;
+  padding: 6px;
+  border: 2px solid rgb(173, 202, 218);
+  background: rgb(11, 11, 11);
+  width: 100%;
+  max-width: 800px; 
+  margin-left:2px ;
+  box-sizing: border-box;
+}
+
+.instruction-input textarea {
+  
+  flex: 1;
+  resize: none; 
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 1em;
+  padding: 6px;
+  outline: none;
+  max-height: 200px; /* limite la hauteur */
+  overflow-y: auto; /* scroll si dépasse */
+}
+
+.send-button {
+  background-color: rgb(173, 202, 218);
+  border: none;
+  color: black;
+  padding: 0 10px;
+  border-radius: 9px;
+  cursor: pointer;
+  font-size: 1.2em;
+  transition: background-color .2s;
+  margin-left: 5px;
+}
+
+.send-button:hover {
+  background-color: rgb(79, 89, 220);
+}
+
+
+
+
+/* ------------------------------------------------------
+   Message List — scroll vertical only
+   ------------------------------------------------------ */
+.message-list {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 1rem;
+  box-sizing: border-box;
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+
+.message {
+  margin-bottom: 0.75rem;
+  max-width: 70%;
+ 
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+
+
+
+.message.user {
+  margin-left: auto;
+  background: #dcf8c6;
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+
+.message.bot {
+  margin-right: auto;
+  background: #fff;
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+
+.input-container {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 8px;
+  background-color: transparent;
+  border-top: 5px solid #dc7979;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Votre InstructionInput existant */
+
+
+
+
+
+
+
+.user-button {
+  display: inline-flex; 
+  align-items: center; 
+  gap: 6px; 
+  background:transparent;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 20px;
+  color: black;
+  font-size: 14px;
+  cursor: pointer;
+}
+.user-button:hover {
+  background-color: white;
+}
+
+.user-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.search-bar {
+  position: fixed;
+  /* distance du haut */
+  left: 50%; /* position horizontale au centre */
+  transform: translateX(-50%); /* centre parfaitement */
+  width: 400px; /* largeur fixe */
+  display: flex;
+   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+  align-items: center;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  border-radius: 20px;
+  padding: 5px 10px;
+  z-index: 1000; /* toujours au-dessus */
+}
+
+
+
+.search-bar input {
+  border: none;
+  outline: none;
+  background: transparent;
+  color: black;
+  font-size: 14px;
+  flex: 1;
+}
+
+.search-bar button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+}
+
+/* Conteneur */
+.template-selector {
+  display: flex;
+    box-shadow: 2px 2px 6px 1px rgba(0,0,0,0.4);
+  flex-direction: column;
+  gap: 26px;
+  height: 90vh;
+  padding: 12px;
+  background: linear-gradient(135deg, #e47ae9ff 0%, #e0e0e0 100%);  /* léger fond */
+ font-family: cursive;
+  border-radius: 12px;
+  width: fit-content;
+  
+  margin-bottom: 10px;
+}
+
+/* Label */
+.selector-label {
+  font-size: 20px;
+  font-weight: bold;
+  color: #444;
+  font-family: cursive;
+}
+
+/* Bouton */
+.temp-button {
+  background: transparent;
+  border: 1px solid #101010;
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-family: cursive;
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #444;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.temp-button:hover {
+  background: #8ac1d6;
+  border-color: #666;
+}
+
+.temp-button:active {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.app {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;        
+}
+
+.workspace {
+  display: flex;
+  flex: 1;
+  min-height: 0;        
+  overflow: hidden;     
+}
+
+
+.document-preview {
+  flex: 1 1 50%;
+  min-width: 0;
+  
+  padding: 0;
+  border: 2px solid rgb(173, 202, 218);
+  border-radius: 25px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+  overflow: auto; 
+  display: flex;
+  background-color: transparent;
+  flex-direction: column;
+  margin-bottom:10px;
+  box-sizing: border-box;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.chat-window {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+       /* on évite tout scroll ici */
+  border: 3px solid rgb(173, 202, 218);
+  border-radius: 10px;
+  margin-right: 5px;
+}
+
+/* === 4) Zone de messages — scroll ONLY vertical */
+.message-list {
+  flex: 1;
+  overflow-y: auto;     /* scrollbar verticale */
+  overflow-x: hidden;   /* PAS de scroll horizontal */
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+/* === 5) Les bulles se coupent bien à la ligne */
+.message {
+  white-space: pre-wrap;    /* wrap + respecte les sauts de ligne */
+  word-break: break-word;   /* coupe les mots trop longs */
+  overflow-wrap: anywhere;  /* pour les très longs “aaaaaaaa…” */
+  max-width: 80%;           /* optionnel : pour ne pas faire 100% de large */
+}
+
+/* === 6) Champ d’envoi toujours en bas */
+
